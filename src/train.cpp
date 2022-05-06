@@ -22,6 +22,7 @@ void Train::addCage(bool light) {
     }
 }
 int Train::getLength() {
+        
         first->light = true;
         first->prev = last;
         last->next = first;
@@ -42,14 +43,13 @@ int Train::getLength() {
                     countOp++;
                 }
                 if (!van->light) {
-                    int len = count;
                     break;
                 }
                 van = van->next;
                 count = 1;
             }
         }
-        return len;
+        return count;
     }
 
 int Train::getOpCount() {
