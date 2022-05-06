@@ -35,10 +35,10 @@ int Train::getLength() {
                 van = van->next;
             } else {
                 if (van->light) {
-                    van->light = 0;
+                        van->light = 0;
                     countOp++;
                 }
-                for (int i = count; i < 0; i--) {
+                for (int i = count; i > 0; i--) {
                     van = van->prev;
                     countOp++;
                 }
