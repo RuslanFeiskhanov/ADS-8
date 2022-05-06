@@ -5,17 +5,14 @@ Train::Train(): countOp(0), first(nullptr) {}
 
 void Train::addCage(bool light) {
     if (first != nullptr) {
-      
         Cage* step;
         step = new Cage;
         step->light = light;
         step->next = nullptr;
         step->prev = last;
         last->next = step;
-        last = step; 
-       
-    } else {
-          
+        last = step;       
+    } else {    
         first = new Cage;
         first->light = light;
         first->next = nullptr;
