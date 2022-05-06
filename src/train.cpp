@@ -11,8 +11,8 @@ void Train::addCage(bool light) {
         step->next = nullptr;
         step->prev = last;
         last->next = step;
-        last = step;       
-    } else {    
+        last = step;
+    } else {
         first = new Cage;
         first->light = light;
         first->next = nullptr;
